@@ -8,18 +8,112 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>dubbo-svc</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <name>dubbo-svc Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+    	<groupId>com.cjk</groupId>
+    	<artifactId>dubbo-api</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    
+<!--     <dependency> -->
+<!--                 <groupId>org.springframework</groupId> -->
+<!--                 <artifactId>spring-framework-bom</artifactId> -->
+<!--                 <version>${spring.version}</version> -->
+<!--                 <type>pom</type> -->
+<!--                 <scope>import</scope> -->
+<!--             </dependency> -->
+<!--             <dependency> -->
+<!--                 Import dependency management from Spring Boot -->
+<!--                 <groupId>org.springframework.boot</groupId> -->
+<!--                 <artifactId>spring-boot-dependencies</artifactId> -->
+<!--                 <version>${spring-boot.version}</version> -->
+<!--                 <type>pom</type> -->
+<!--                 <scope>import</scope> -->
+<!--             </dependency> -->
+<!--             <dependency> -->
+<!--                 <groupId>org.apache.dubbo</groupId> -->
+<!--                 <artifactId>dubbo-bom</artifactId> -->
+<!--                 <version>${dubbo.version}</version> -->
+<!--                 <type>pom</type> -->
+<!--                 <scope>import</scope> -->
+<!--             </dependency> -->
+<!--             <dependency> -->
+<!--                 <groupId>org.apache.dubbo</groupId> -->
+<!--                 <artifactId>dubbo</artifactId> -->
+<!--                 <exclusions> -->
+<!--                     <exclusion> -->
+<!--                         <groupId>org.apache.thrift</groupId> -->
+<!--                         <artifactId>libthrift</artifactId> -->
+<!--                     </exclusion> -->
+<!--                 </exclusions> -->
+<!--             </dependency> -->
+<!--             <dependency> -->
+<!--                 <groupId>org.apache.dubbo</groupId> -->
+<!--                 <artifactId>dubbo-rpc-rest</artifactId> -->
+<!--             </dependency> -->
+<!--             <dependency> -->
+<!--                 <groupId>org.apache.zookeeper</groupId> -->
+<!--                 <artifactId>zookeeper</artifactId> -->
+<!--             </dependency> -->
+<!--             <dependency> -->
+<!--                 <groupId>org.apache.curator</groupId> -->
+<!--                 <artifactId>curator-framework</artifactId> -->
+<!--                 <exclusions> -->
+<!--                     <exclusion> -->
+<!--                         <groupId>org.apache.zookeeper</groupId> -->
+<!--                         <artifactId>zookeeper</artifactId> -->
+<!--                     </exclusion> -->
+<!--                 </exclusions> -->
+<!--             </dependency> -->
+<!--             <dependency> -->
+<!--                 <groupId>javax.validation</groupId> -->
+<!--                 <artifactId>validation-api</artifactId> -->
+<!--             </dependency> -->
+<!--             <dependency> -->
+<!--                 <groupId>org.jboss.resteasy</groupId> -->
+<!--                 <artifactId>resteasy-jackson-provider</artifactId> -->
+<!--             </dependency> -->
+<!--             <dependency> -->
+<!--                 <groupId>org.apache.curator</groupId> -->
+<!--                 <artifactId>curator-client</artifactId> -->
+<!--                 <exclusions> -->
+<!--                     <exclusion> -->
+<!--                         <groupId>org.apache.zookeeper</groupId> -->
+<!--                         <artifactId>zookeeper</artifactId> -->
+<!--                     </exclusion> -->
+<!--                 </exclusions> -->
+<!--             </dependency> -->
+<!--             <dependency> -->
+<!--                 <groupId>javax.servlet</groupId> -->
+<!--                 <artifactId>javax.servlet-api</artifactId> -->
+<!--             </dependency> -->
+<!--             <dependency> -->
+<!--                 <groupId>org.apache.tomcat.embed</groupId> -->
+<!--                 <artifactId>tomcat-embed-core</artifactId> -->
+<!--             </dependency> -->
+<!--             <dependency> -->
+<!--                 <groupId>org.apache.tomcat.embed</groupId> -->
+<!--                 <artifactId>tomcat-embed-logging-juli</artifactId> -->
+<!--             </dependency> -->
   </dependencies>
   <build>
     <finalName>dubbo-svc</finalName>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <classifier>exec</classifier>
+            </configuration>
+        </plugin>
+    </plugins>
   </build>
 </project>

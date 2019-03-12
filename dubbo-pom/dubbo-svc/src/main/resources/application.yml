@@ -1,0 +1,19 @@
+#spring.dubbo.application.name=provider
+##spring.dubbo.registry.address=zookeeper://47.99.216.28:2181
+#spring.dubbo.registry.address=zookeeper://127.0.0.1:2181
+#spring.dubbo.protocol.name=dubbo
+#spring.dubbo.protocol.port=20880
+#spring.dubbo.scan=org.spring.springboot.dubbo
+server: 
+  port: 8081
+dubbo:
+  application:
+    name: dubbo-provider-demo
+  registry: 
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 20880
+  scan: 
+    basePackages: org.dubbo.svc.impl
+     

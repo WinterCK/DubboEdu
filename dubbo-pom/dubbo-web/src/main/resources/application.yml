@@ -1,0 +1,9 @@
+dubbo:
+  application: 
+    name: dubbo-consumer-demo
+  registry: 
+    address: zookeeper://127.0.0.1:2181
+server: 
+  port: 9001
+#  context-path: /app
+  

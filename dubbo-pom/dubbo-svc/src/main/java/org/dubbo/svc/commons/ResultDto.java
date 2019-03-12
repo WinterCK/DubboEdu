@@ -5,6 +5,9 @@ import java.io.Serializable;
 public class ResultDto<T> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	private static final String SUCCESS_CODE = "0000";
+	private static final String ERROR_CODE = "9999";
+	
 	/** 返回代码Code */
 	private String respCode;
 	/** 返回信息Msg */
@@ -25,12 +28,34 @@ public class ResultDto<T> implements Serializable {
 	}
 	
 	
-	public static ResultDto valueOfSuccess() {
-		return new ResultDto("0000");
+	/**
+	 * 成功返回方法
+	 * @param value
+	 * @return
+	 */
+	public static <T> ResultDto<T> valueOfSuccess(T value) {
+	    ResultDto<T> vo = new ResultDto<T>(SUCCESS_CODE);
+	    vo.value = value;
+	    return vo;
 	}
 	
-	public static ResultDto valueOfError() {
-		return new ResultDto("9999");
+	/**
+	 * 失败返回方法
+	 * @param value
+	 * @return
+	 */
+	public static <T> ResultDto<T> valueOfError(T value) {
+	    ResultDto<T> vo = new ResultDto<T>(ERROR_CODE);
+	    vo.value = value;
+		return vo;
+	}
+	
+	public static <T> ResultDto<T> valueOfSuccess() {
+	    return valueOfSuccess(null);
+	}
+	
+	public static <T> ResultDto<T> valueOfError() {
+	    return valueOfError(null);
 	}
 
 	public String getRespCode() {
@@ -56,7 +81,5 @@ public class ResultDto<T> implements Serializable {
 	public void setValue(T value) {
 		this.value = value;
 	}
-	
-	
 
 }

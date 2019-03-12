@@ -7,18 +7,20 @@
     <artifactId>dubbo-pom</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.cjk</groupId>
   <artifactId>dubbo-web</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <name>dubbo-web Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>com.cjk</groupId>
+    	<artifactId>dubbo-api</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
   <build>
