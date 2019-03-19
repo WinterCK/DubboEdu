@@ -1,10 +1,8 @@
 package org.dubbo.web;
 
-import org.dubbo.api.service.HelloService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 
 /**
  * <p>标题: </p>

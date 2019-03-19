@@ -1,6 +1,5 @@
 package org.dubbo.svc.impl;
 
-import org.dubbo.api.dto.ResultDto;
 import org.dubbo.api.service.HelloService;
 
 import com.alibaba.dubbo.config.annotation.Service;

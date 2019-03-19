@@ -1,19 +1,34 @@
+spring:
+  profiles:
+    active: dev
+#server: 
+#  port: 8081
+#dubbo:
+#  application:
+#    name: dubbo-provider-demo
+#  registry: 
+#    address: zookeeper://127.0.0.1:2181
+#  protocol:
+#    name: dubbo
+#    port: 20880
+#  scan: 
+#    basePackages: org.dubbo
+    
+#公共配置与profiles选择无关
+#mybatis:
+#  type-aliases-package: org.dubbo
+#  mapper-locations: classpath:mappers/*.xml
+#  
+#spring: 
+#  datasource: 
+#    url: jdbc:mysql://47.99.216.28:3306/mysql?characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull
+#    username: root
+#    password: Chenjk542397
+#    driver-class-name: com.mysql.jdbc.Driver
+    
 #spring.dubbo.application.name=provider
 ##spring.dubbo.registry.address=zookeeper://47.99.216.28:2181
 #spring.dubbo.registry.address=zookeeper://127.0.0.1:2181
 #spring.dubbo.protocol.name=dubbo
 #spring.dubbo.protocol.port=20880
 #spring.dubbo.scan=org.spring.springboot.dubbo
-server: 
-  port: 8081
-dubbo:
-  application:
-    name: dubbo-provider-demo
-  registry: 
-    address: zookeeper://127.0.0.1:2181
-  protocol:
-    name: dubbo
-    port: 20880
-  scan: 
-    basePackages: org.dubbo.svc.impl
-     
