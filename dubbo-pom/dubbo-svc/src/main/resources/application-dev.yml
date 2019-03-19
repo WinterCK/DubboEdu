@@ -23,7 +23,7 @@ spring:
           filters: stat
           driver-class-name: com.mysql.jdbc.Driver
           #基本属性
-          url: jdbc:mysql://47.99.216.28:3306/study?characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull
+          url: jdbc:mysql://ip:port/database?characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull
           username: root
           password: Chenjk542397
           #配置初始化大小/最小/最大
