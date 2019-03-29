@@ -3,13 +3,14 @@ package org.dubbo.business;
 import org.dubbo.api.common.dto.ResultDto;
 import org.dubbo.api.dto.EduUserDto;
 import org.dubbo.commons.Application;
-import org.dubbo.edu.dao.EduUserDAO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
+
+import com.alibaba.fastjson.JSONObject;
 
 /**
  * <p>标题: </p>
@@ -38,8 +39,8 @@ public class LoginBusinessTest {
         EduUserDto userDto = new EduUserDto();
         userDto.setPhone("1213123");
 //        EduUserDto re = busi.selectByPhonePassword("123", "123");
-        busi.doLogin(userDto);
-        System.out.println("");
+        ResultDto<String> result = busi.doLogin(userDto);
+        System.out.println(JSONObject.toJSONString(result));
     }
 
 }
